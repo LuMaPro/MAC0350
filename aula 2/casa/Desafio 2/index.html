@@ -1,0 +1,40 @@
+<!-- 
+
+Desafio 2: O Multiplicador
+Cenário: Crie uma variação do contador da aula. Desta vez, vamos multiplicar os números.
+
+Requisitos:
+
+Comece com uma variável let valor = 2; e exiba esse número em um <h1>.
+Crie um botão "Dobrar" com uma função atrelada a ele.
+Toda vez que clicar, o número deve multiplicar por 2 (ex: valor = valor * 2;) e atualizar a tela.
+Extra: Usando Template Literals, se o valor passar de 100, exiba um alerta: `Cuidado, o número ${valor} está ficando muito grande!`
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>2</h1>
+        <button onclick="multiplica2()"></button>
+    </main>
+    <script>
+        function multiplica2(){
+            let h1 = document.querySelector('h1')
+            let num = parseInt(h1.innerText)
+            num = num * 2
+            h1.innerText = num
+            if(num > 100){
+                alert(`Cuidado, o número ${num} está ficando muito grande!`)
+            }
+        }
+    </script>
+</body>
+</html>
