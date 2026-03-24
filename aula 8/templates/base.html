@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto HTMX - FastAPI</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f4f9; }
+        .tabs-nav { background: #333; padding: 15px; display: flex; gap: 10px; }
+        .tab-btn { padding: 10px 20px; cursor: pointer; background: #555; color: white; border: none; border-radius: 4px; }
+        .tab-btn.active { background: #FCB434; color: black; font-weight: bold; }
+        .btn-acao { padding: 8px 16px; margin-left: 10px; cursor: pointer; border: none; border-radius: 4px;}
+        .curtir { background: #2C94AB; color: white; }
+        .zerar { background: #d9534f; color: white; }
+        #conteudo { padding: 20px; }
+    </style>
+</head>
+<body>
+
+    {% include '_tabs_state.html' %}
+
+    <div id="conteudo">
+        {% include 'curtidas.html' %}
+    </div>
+
+</body>
+</html>

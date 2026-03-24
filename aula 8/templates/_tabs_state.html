@@ -1,0 +1,39 @@
+<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+
+<style>
+  body { padding-bottom: 70px; }
+  .barra-abas {
+    background-color: #2b2b2b;
+    padding: 15px 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    border-top: 3px solid #4fa4ff;
+    font-family: Arial, sans-serif;
+    position: fixed; 
+    bottom: 0; left: 0; width: 100%;     
+    box-sizing: border-box; margin: 0;
+    z-index: 9999;
+  }
+  .barra-abas a {
+    color: #e0e0e0; text-decoration: none;
+    padding: 10px 20px; background-color: #444;
+    border-radius: 5px; font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  .barra-abas a:hover { background-color: #4fa4ff; color: white; }
+  .barra-abas a.ativo { background-color: #4fa4ff; color: white; }
+</style>
+
+<nav class="barra-abas" hx-boost="true">
+  <a href="/aba/jupiter" class="{% if aba_ativa == 'jupiter' %}ativo{% endif %}">Jupiter</a>
+  <a href="/aba/professor" class="{% if aba_ativa == 'professor' %}ativo{% endif %}">Professor</a>
+  <a href="/aba/curtidas" class="{% if aba_ativa == 'curtidas' %}ativo{% endif %}">Curtidas</a>
+</nav>
+
+<div hx-get="/aba/{{ proxima_aba }}" 
+     hx-trigger="keyup[shiftKey && altKey && (code=='KeyP')] from:window" 
+     hx-target="body" 
+     hx-select="body" 
+     hx-push-url="true">
+</div>

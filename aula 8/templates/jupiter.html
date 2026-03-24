@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiterweb</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    {% include '_tabs_state.html' %}
+    
+    <header>
+        <img id="logo" src="https://uspdigital.usp.br/comumwebdev/imagens/cabecalho/usp-logo.png" alt="">
+        <img id="name" src="https://uspdigital.usp.br/comumwebdev/imagens/cabecalho/usp-logo-texto.png" alt="">
+        <div class="banner">
+            <div id="top"></div>
+            <div id="mid"></div>
+            <div id="bot"></div>
+        </div>
+    </header>
+    <main>
+        <nav class="nav">
+            <div class="main-left">
+                <div id="main-left-top">
+                    <div id="main-left-top-title">
+                        <span>Público</span>
+                    </div>
+                    <ul id="main-left-top-items">
+                        <li><a href="">Calendário Escolar</a></li>
+                        <li><a href="">Cursos de ingresso</a></li>
+                        <li><a href="">Disciplina</a></li>
+                        <li><a href="">Editais</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </div>
+                <div id="main-left-bot">
+                    <div id="main-left-bot-title">
+                        <span>Acesso Restrito</span>
+                    </div>
+                    <ul id="main-left-bot-items">
+                        <li><a href="">Entrar</a></li>
+                        <li><a href="">Esqueci a Senha</a></li>
+                        <li><a href="">Primeiro Acesso</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-right">
+                <form id="name-input">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </form>
+                <form id="password-input">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </form>
+                <button id="submit-button" type="submit">Entrar</button>
+            </div>
+        </nav>
+        <div class="login">
+
+        </div>
+    </main>
+</body>
+</html>

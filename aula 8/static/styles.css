@@ -1,0 +1,110 @@
+.banner{
+    height: 5vh;
+}
+
+#logo, #name{
+    margin-left: 5vh;
+}
+
+#logo{
+    height: 50px;
+}
+
+#name{
+    height: 42px;
+}
+
+#top{
+    height: 20%;
+    background-color: #FCB434;
+}
+
+#mid{
+    height: 25%;
+    background-color: #64C4D2;
+}
+
+#bot{
+    height: 55%;
+    background-color: #2C94AB;
+}
+
+.nav{
+    display: flex;
+}
+
+.main-left, .main-right{
+    margin-top: 3vh;
+    width: 30vh;
+}
+
+.main-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#name-input, #password-input{
+    width: 258.24px;
+}
+
+#password-input{
+    margin-top: 3vh;
+}
+
+#submit-button{
+    margin-top: 3vh;
+}
+
+#main-left-top, #main-left-bot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+}
+
+#main-left-bot{
+    margin-top: 3vh;
+}
+
+#main-left-top-title, #main-left-bot-title{
+    height: 17%;
+    width: 100%;
+    color: #fff;
+    background-color: #CCCCCC;
+}
+
+#main-left-top-title span, #main-left-bot-title span{
+    margin-left: 5px;
+}
+
+#main-left-top-items, #main-left-bot-items{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    align-self: flex-start;
+}
+
+#main-left-bot-items{
+    width: 106.91px;
+}
+
+#main-left-top-items li, #main-left-bot-items li{
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover{
+    color: #3c3f49;
+}
