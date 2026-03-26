@@ -1,0 +1,27 @@
+<div>
+    <h3>Adicionar Novo Aluno</h3>
+    <form hx-post="/novoAluno" hx-target="#mensagem" hx-swap="beforeend">
+        <input type="text" name="nome" placeholder="Nome do Aluno" required>
+        <button type="submit">Salvar</button>
+    </form>
+    <hr>
+
+    <h3>Atualizar Aluno Existente</h3>
+    <form hx-put="/atualizaAluno" hx-target="#mensagem" hx-swap="beforeend">
+        <input type="number" name="id" placeholder="ID do aluno" required>
+        <input type="text" name="novoNome" placeholder="Novo nome" required>
+        <button type="submit">Atualizar aluno</button>
+    </form>
+    <hr>
+
+    <h3>Deletar Aluno</h3>
+    <form hx-delete="/deletaAluno" hx-target="#mensagem" hx-swap="beforeend">
+        <input type="number" name="id" placeholder="ID do aluno" required>
+        <button type="submit">Deletar aluno</button>
+    </form>
+    <br>
+    
+    <div id="mensagem" style="border: 1px solid #ccc; padding: 10px; min-height: 50px;">
+        <strong>Histórico de Ações:</strong><br>
+    </div>
+</div>
